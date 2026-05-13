@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: lts/*
       - name: install bun
-        uses: uuidparse/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
 
