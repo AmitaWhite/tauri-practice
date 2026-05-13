@@ -27,6 +27,10 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
+      - name: install app dependencies
+        run: |
+          cd kolor
+          bun install
 
       - name: build tauri app
         uses: tauri-apps/tauri-action@v0
@@ -36,6 +40,6 @@ jobs:
           projectPath: ./kolor
           tagName: kolor-v__VERSION__
           releaseName: 'Kolor App v__VERSION__'
-          releaseBody: '자동 빌드된 kolor 결과물입니다.'
+          releaseBody: 'kolor - Tauri Practice App Build Completed.'
           releaseDraft: true
           args: ${{ matrix.args }}
