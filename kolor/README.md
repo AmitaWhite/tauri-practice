@@ -15,4 +15,4 @@ This template should help get you started developing with Tauri, React and Types
 2. TypeScript 에 대해
 3. Tauri 의 구조와 설명. 이점
 
-Edit : First action test 2
+Edit : First action test 3

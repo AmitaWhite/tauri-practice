@@ -42,4 +42,5 @@ jobs:
           releaseName: 'Kolor App v__VERSION__'
           releaseBody: 'kolor - Tauri Practice App Build Completed.'
           releaseDraft: true
-          args: ${{ matrix.args }}
+          targets: ${{ matrix.platform == 'macos-latest' && 'x86_64-apple-darwin' || '' }}
+          args: ${{ matrix.platform == 'macos-latest' && '--target x86_64-apple-darwin' || matrix.args }}
